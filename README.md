@@ -1,8 +1,8 @@
 # Volný projekt
 
-> **Jméno a příjmení:** `Doplňte`
+> **Jméno a příjmení:** Jakub Kolinger
 
-> **Název projektu:** `Doplňte`
+> **Název projektu:** Kolinger
 
 ---
 
@@ -36,7 +36,7 @@ _Shrnutí všech odkazů na jednom místě. Průběžně aktualizujte._
 | Výstup | Odkaz |
 |---|---|
 | GitHub Pages (live) | [`Doplň odkaz`](#) |
-| Grafický manuál (Figma / Canva) | [`Doplň odkaz`](#) |
+| Grafický manuál (Figma / Canva) | [https://www.figma.com/design/0kGIbzjApbnrgdUiP20kLP/Untitled?node-id=0-1&t=lCJjJCZURZ9YGFJW-1](#) |
 | Grafický návrh webu (Figma) | [`Doplň odkaz`](#) |
 | Fotografie / média | [`Doplň odkaz`](#) |
 

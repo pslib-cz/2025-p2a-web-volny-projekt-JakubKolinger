@@ -36,8 +36,8 @@ _Shrnutí všech odkazů na jednom místě. Průběžně aktualizujte._
 | Výstup | Odkaz |
 |---|---|
 | GitHub Pages (live) | [`Doplň odkaz`](#) |
-| Grafický manuál (Figma / Canva) | [https://www.figma.com/design/0kGIbzjApbnrgdUiP20kLP/Stellar-Dynamics?node-id=0-1&t=zL2sOEgcDHe7FWLK-1](#) |
-| Grafický návrh webu (Figma) | [https://www.figma.com/design/0kGIbzjApbnrgdUiP20kLP/Stellar-Dynamics?node-id=0-1&t=zL2sOEgcDHe7FWLK-1](#) |
+| Grafický manuál (Figma / Canva) | [`https://www.figma.com/design/2DCAJiWm99SRjgIGfTjbdQ/KolingerJakub?node-id=0-1&t=53Hyv9IWx4Dwx8SK-1`](#) |
+| Grafický návrh webu (Figma) | [`https://www.figma.com/design/2DCAJiWm99SRjgIGfTjbdQ/KolingerJakub?node-id=0-1&t=53Hyv9IWx4Dwx8SK-1`](#) |
 | Fotografie / média | [`Doplň odkaz`](#) |
 
 ---

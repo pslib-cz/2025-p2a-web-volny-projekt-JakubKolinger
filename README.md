@@ -35,7 +35,7 @@ _Shrnutí všech odkazů na jednom místě. Průběžně aktualizujte._
 
 | Výstup | Odkaz |
 |---|---|
-| GitHub Pages (live) | [`PAGES`](#) |
+| GitHub Pages (live) | [`PAGES`](https://pslib-cz.github.io/2025-p2a-web-volny-projekt-JakubKolinger/) |
 | Grafický manuál (Figma / Canva) | [`FIGMA`](https://www.figma.com/design/2DCAJiWm99SRjgIGfTjbdQ/KolingerJakub?node-id=0-1&t=53Hyv9IWx4Dwx8SK-1) |
 | Grafický návrh webu (Figma) | [`FIGMA`](https://www.figma.com/design/2DCAJiWm99SRjgIGfTjbdQ/KolingerJakub?node-id=0-1&t=53Hyv9IWx4Dwx8SK-1) |
 | Fotografie / média | [`Fotiky`](#) |

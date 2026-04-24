@@ -10,7 +10,7 @@
 
 _Krátce popište svůj projekt – čemu se věnuje, co nabízí a jaký problém řeší?_
 
-`Web o mě kdybych byl indie game dev.`
+`Web o mě kdybych byl indie game dev, nebudou se tam prodávat hry, budou tam spíše detailnější informace k projektů, nebo tam budou gameassety, nebo mody do různých her.`
 
 ---
 

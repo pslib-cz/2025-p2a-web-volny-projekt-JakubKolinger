@@ -4,11 +4,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap") layer(global);
 
-@import url("./style.css") layer(page);
-@import url("./produkty.css") layer(page);
-@import url("./produkt.css") layer(page);
-@import url("./kontakty.css") layer(page);
-@import url("./novinka.css") layer(page);
+/* page-specific styles are loaded directly from each HTML file
+    to avoid bundling all page CSS into a single global file */
 
 @layer global {
 

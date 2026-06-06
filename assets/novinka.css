@@ -1,0 +1,239 @@
+/* ── NEWS ARTICLE PAGE (novinka.html) ── */
+
+.novinka-hero {
+    position: relative;
+    height: min(60vh, 500px);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-alt) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg);
+    text-align: center;
+    padding: 2rem 1.25rem;
+}
+
+.novinka-hero h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    line-height: 1.3;
+    color: var(--bg);
+}
+
+.novinka-hero p {
+    font-size: .95rem;
+    margin-top: .75rem;
+    opacity: .9;
+}
+
+.news-article {
+    padding: 2.5rem 1.25rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.news-article__meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    font-size: .85rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+}
+
+.news-article__meta-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.news-article__content {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.news-article figure {
+    margin: 0;
+    padding: 0;
+    border-radius: .65rem;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+.news-article figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-article figcaption {
+    font-size: .85rem;
+    color: var(--text-muted);
+    padding: .75rem 0;
+    font-style: italic;
+}
+
+.news-article h2 {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+
+.news-article h3 {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin: 1.5rem 0 .75rem;
+}
+
+.news-article p {
+    color: var(--text-muted);
+    line-height: 1.85;
+    font-size: .95rem;
+    text-align: justify;
+}
+
+.news-article ul,
+.news-article ol {
+    color: var(--text-muted);
+    line-height: 1.85;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.news-article li {
+    margin-bottom: .75rem;
+}
+
+.news-article blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--text);
+    font-size: 1.05rem;
+}
+
+/* ── RELATED ARTICLES ── */
+
+.news-related {
+    background-color: var(--bg-alt);
+    padding: 2.5rem 1.25rem;
+    margin-top: 3rem;
+}
+
+.news-related h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text);
+}
+
+.news-related__grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.news-card-small {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: .65rem;
+    overflow: hidden;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.news-card-small:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px var(--shadow);
+}
+
+.news-card-small img {
+    border-radius: .5rem;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.news-card-small-title {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+
+.news-card-small-text {
+    font-size: .85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ── DESKTOP ── */
+
+@media (min-width: 768px) {
+    .novinka-hero {
+        height: 70vh;
+        padding: 2rem;
+    }
+
+    .novinka-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .novinka-hero p {
+        font-size: 1.05rem;
+    }
+
+    .news-article {
+        padding: 3.5rem 2rem;
+    }
+
+    .news-article__meta {
+        gap: 2.5rem;
+        font-size: .9rem;
+    }
+
+    .news-article h2 {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+
+    .news-article h3 {
+        font-size: 1.35rem;
+    }
+
+    .news-article p {
+        font-size: 1rem;
+    }
+
+    .news-related {
+        padding: 3.5rem 2rem;
+        margin-top: 4rem;
+    }
+
+    .news-related h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .news-related__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .news-card-small {
+        padding: 1.5rem;
+    }
+
+    .news-card-small-title {
+        font-size: 1.1rem;
+    }
+}

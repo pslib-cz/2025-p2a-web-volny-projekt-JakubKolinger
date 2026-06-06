@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Produkt | Stellar Dynamics</title>
 	<link rel="stylesheet" href="./assets/main.css">
-	<link rel="stylesheet" href="./assets/produkt.css">
 	<link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
 </head>
 <body>
@@ -50,20 +49,128 @@
 	</header>
 
 	<main>
+		<section class="product-hero">
+			<h1>Abyssal Echo</h1>
+			<p>Atmosférická dobrodružná hra se zaměřením na zvukové interakce a průzkum.</p>
+		</section>
+
 		<section class="product-detail">
-			<div class="product-detail__media">
-				<img src="./assets/images/H1P1.png" alt="Abyssal Echo">
+			<div class="product-detail__container">
+				<div class="product-detail__media">
+					<div class="product-detail__main-image">
+						<img src="./assets/images/H1P1.png" alt="Abyssal Echo - hlavní obrázek">
+					</div>
+					<div class="product-detail__thumbnails">
+						<div class="product-detail__thumbnail active">
+							<img src="./assets/images/H1P1.png" alt="Obrázek 1">
+						</div>
+						<div class="product-detail__thumbnail">
+							<img src="./assets/images/H2.png" alt="Obrázek 2">
+						</div>
+						<div class="product-detail__thumbnail">
+							<img src="./assets/images/H3.png" alt="Obrázek 3">
+						</div>
+					</div>
+				</div>
+
+				<div class="product-detail__info">
+					<span class="product-detail__category">Akční - Dobrodružství</span>
+					<h2 class="product-detail__title">Abyssal Echo</h2>
+					<div class="product-detail__price">29,99 €</div>
+					
+					<div class="product-detail__rating">
+						⭐ <span>4.8</span> / 5 (234 recenzí)
+					</div>
+
+					<p class="product-detail__description">
+						Vstupte do světa, kde ticho znamená smrt a zvuk je vaším jediným kompasem. V nové hře Abyssal Echo se vydáte do zapomenutých hlubin oceánu, abyste odhalili tajemství civilizace, která komunikovala skrze frekvence. Jedinečné zvukové mechaniky vás budou vést temnou páteří oceánu.
+					</p>
+
+					<div class="product-specs">
+						<div class="product-specs__title">Specifikace</div>
+						<div class="product-specs-item">
+							<span class="product-specs-label">Typ hry:</span>
+							<span class="product-specs-value">Akční - Dobrodružství</span>
+						</div>
+						<div class="product-specs-item">
+							<span class="product-specs-label">Vydavatel:</span>
+							<span class="product-specs-value">Stellar Dynamics</span>
+						</div>
+						<div class="product-specs-item">
+							<span class="product-specs-label">Rok vydání:</span>
+							<span class="product-specs-value">2025</span>
+						</div>
+						<div class="product-specs-item">
+							<span class="product-specs-label">Platformy:</span>
+							<span class="product-specs-value">PC, Console</span>
+						</div>
+						<div class="product-specs-item">
+							<span class="product-specs-label">Jazyk:</span>
+							<span class="product-specs-value">Čeština, Angličtina</span>
+						</div>
+					</div>
+
+					<div class="product-actions">
+						<button class="btn-primary">Koupit nyní</button>
+						<button class="btn-secondary">Přidat do oblíbených</button>
+					</div>
+				</div>
 			</div>
-			<div class="product-detail__info">
-				<h1>Abyssal Echo</h1>
-				<p>Atmosférická dobrodružná hra se zaměřením na zvukové interakce a průzkum.</p>
+		</section>
+
+		<section class="product-related">
+			<h2>Doporučené hry</h2>
+			<div class="product-related__grid">
+				<article class="product-card-related">
+					<div class="product-card-related__image">
+						<img src="./assets/images/H2.png" alt="Projekt B">
+					</div>
+					<div class="product-card-related__body">
+						<h3 class="product-card-related__title">Projekt B</h3>
+						<div class="product-card-related__price">39,99 €</div>
+					</div>
+				</article>
+				<article class="product-card-related">
+					<div class="product-card-related__image">
+						<img src="./assets/images/H3.png" alt="Hvězda Vesmíru">
+					</div>
+					<div class="product-card-related__body">
+						<h3 class="product-card-related__title">Hvězda Vesmíru</h3>
+						<div class="product-card-related__price">24,99 €</div>
+					</div>
+				</article>
+				<article class="product-card-related">
+					<div class="product-card-related__image">
+						<img src="./assets/images/H1P1.png" alt="Temná Fantazie">
+					</div>
+					<div class="product-card-related__body">
+						<h3 class="product-card-related__title">Temná Fantazie</h3>
+						<div class="product-card-related__price">34,99 €</div>
+					</div>
+				</article>
 			</div>
 		</section>
 	</main>
 
 	<footer class="site-footer">
 		<div class="site-footer__inner">
-			<p class="site-footer__copy">Copyright &copy; Stellar Dynamics</p>
+			<div class="site-footer__content">
+				<div class="site-footer__section">
+					<h3>O nás</h3>
+					<p>Stellar Dynamics je nezávislé studio zaměřené na vytváření jedinečných herních zážitků.</p>
+				</div>
+				<div class="site-footer__section">
+					<h3>Produkty</h3>
+					<p><a href="./produkty.html">Všechny hry</a></p>
+					<p><a href="./index.html">Domů</a></p>
+				</div>
+				<div class="site-footer__section">
+					<h3>Kontakt</h3>
+					<p><a href="./kontakty.html">Kontaktujte nás</a></p>
+					<p><a href="mailto:info@stellardynamics.com">info@stellardynamics.com</a></p>
+				</div>
+			</div>
+			<p class="site-footer__copy">Copyright &copy; 2025 Stellar Dynamics. Všechna práva vyhrazena.</p>
 		</div>
 	</footer>
 

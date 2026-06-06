@@ -1,9 +1,9 @@
 /* index.html */
 
-/* ── O NÁS ── */
+/* ── O NÁS (index.html) ── */
 
 .about {
-    padding: 2rem 1.25rem;
+    padding: 2.5rem 1.25rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -14,21 +14,23 @@
 }
 
 .about__text h2 {
-    font-size: 1.5rem;
-    margin-bottom: .75rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text);
 }
 
 .about__text p {
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--text-muted);
     font-size: .95rem;
 }
 
 .about__logos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
     align-items: center;
+    padding: 1rem 0;
 }
 
 .about__logo {
@@ -44,18 +46,20 @@
     filter: grayscale(0) opacity(1);
 }
 
-/* ── NOVINKY (carousel – CSS scroll snap) ── */
+/* ── NOVINKY (horizontal scroll) ── */
 
 .news {
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     background-color: var(--bg-alt);
 }
 
 .news__title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     padding: 0 1.25rem;
+    color: var(--text);
+    font-weight: 700;
 }
 
 .news__track {
@@ -64,7 +68,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    padding: .5rem 1.25rem 1rem;
+    padding: .75rem 1.25rem 1.5rem;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -75,7 +79,7 @@
 
 .news__card {
     scroll-snap-align: start;
-    flex: 0 0 min(80vw, 22rem);
+    flex: 0 0 min(85vw, 24rem);
     background-color: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: .65rem;
@@ -87,7 +91,7 @@
 
 .news__card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px var(--shadow);
+    box-shadow: 0 12px 32px var(--shadow);
 }
 
 .news__card-img {
@@ -97,7 +101,7 @@
 }
 
 .news__card-body {
-    padding: 1rem;
+    padding: 1.25rem;
     display: grid;
     gap: .5rem;
 }
@@ -105,18 +109,19 @@
 .news__card-title {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.05rem;
     text-transform: uppercase;
     letter-spacing: .03em;
+    color: var(--text);
 }
 
 .news__card-text {
-    font-size: .875rem;
+    font-size: .85rem;
     color: var(--text-muted);
     line-height: 1.6;
-        line-clamp: 4;
+    line-clamp: 3;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -124,23 +129,24 @@
 /* ── VIZE A HODNOTY ── */
 
 .values {
-    padding: 2rem 1.25rem;
+    padding: 2.5rem 1.25rem;
     max-width: 1400px;
     margin: 0 auto;
 }
 
 .values__inner {
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .values__text h2 {
-    font-size: 1.5rem;
-    margin-bottom: .75rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text);
 }
 
 .values__text p {
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--text-muted);
     font-size: .95rem;
 }
@@ -160,13 +166,13 @@
 /* ── HISTORIE A MILNÍKY ── */
 
 .history {
-    padding: 2rem 1.25rem;
+    padding: 2.5rem 1.25rem;
     background-color: var(--bg-alt);
 }
 
 .history__inner {
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -184,12 +190,13 @@
 }
 
 .history__text h2 {
-    font-size: 1.5rem;
-    margin-bottom: .75rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text);
 }
 
 .history__text p {
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--text-muted);
     font-size: .95rem;
 }
@@ -197,24 +204,24 @@
 /* ── TÝM A KULTURA ── */
 
 .team {
-    padding: 2rem 1.25rem;
+    padding: 2.5rem 1.25rem;
     max-width: 1400px;
     margin: 0 auto;
 }
 
 .team__inner {
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .team__text h2 {
-    font-size: 1.5rem;
-    margin-bottom: .75rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text);
 }
 
 .team__text p {
-    line-height: 1.7;
-    color: var(--text-muted);
+    line-height: 1.8;
     font-size: .95rem;
 }
 
@@ -230,63 +237,105 @@
     object-fit: cover;
 }
 
-/* ── DESKTOP ── */
+/* ── DESKTOP LAYOUTS ── */
 
 @media (min-width: 768px) {
+    .about {
+        padding: 3rem 2rem;
+    }
 
     .about__inner {
         grid-template-columns: 1fr 1fr;
         align-items: center;
+        gap: 3rem;
     }
 
     .about__logos {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .news__card {
-        flex: 0 0 22rem;
+    .news {
+        padding: 3rem 0;
     }
 
-    /* desktop: obrázek vedle textu */
+    .news__title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .news__track {
+        padding: 1.5rem 2rem;
+        gap: 1.5rem;
+    }
+
     .news__card {
-        display: grid;
-        grid-template-columns: 38% 1fr;
-        align-items: center;
-        gap: 1rem;
+        flex: 0 0 calc(50% - 0.75rem);
+        grid-template-columns: 40% 1fr;
+        align-items: stretch;
+        gap: 1.5rem;
+        padding: 1.5rem;
     }
 
     .news__card-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        aspect-ratio: auto;
+        border-radius: .5rem;
+    }
+
+    .news__card-body {
+        padding: 0;
+    }
+
+    .values {
+        padding: 3rem 2rem;
     }
 
     .values__inner {
         grid-template-columns: 1fr 1fr;
         align-items: center;
+        gap: 3rem;
+    }
+
+    .values__text h2 {
+        font-size: 1.9rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .history {
+        padding: 3rem 2rem;
     }
 
     .history__inner {
         grid-template-columns: 1fr 1fr;
         align-items: center;
+        gap: 3rem;
+    }
+
+    .history__text h2 {
+        font-size: 1.9rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .team {
+        padding: 3rem 2rem;
     }
 
     .team__inner {
         grid-template-columns: 1fr 1fr;
         align-items: center;
+        gap: 3rem;
     }
 
-    .values__text h2,
-    .history__text h2,
     .team__text h2 {
-        font-size: 1.85rem;
+        font-size: 1.9rem;
+        margin-bottom: 1.25rem;
     }
 }
 
 @media (min-width: 1024px) {
-
     .about__logos {
         grid-template-columns: repeat(5, 1fr);
+    }
+
+    .news__card {
+        flex: 0 0 calc(33.33% - 1rem);
     }
 }

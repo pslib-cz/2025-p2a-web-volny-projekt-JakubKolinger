@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Produkty | Stellar Dynamics</title>
 	<link rel="stylesheet" href="./assets/main.css">
-	<link rel="stylesheet" href="./assets/produkty.css">
 	<link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
 </head>
 <body>
@@ -50,21 +49,41 @@
 	</header>
 
 	<main>
+		<section class="produkty-hero">
+			<h1>Naše hry</h1>
+			<p>Objevte fascinující katalog her od Stellar Dynamics. Každá hra je navržena s péčí a inovací.</p>
+		</section>
+
 		<section class="catalog">
-			<h1>Produkty</h1>
 			<div class="catalog__controls">
-				<label for="sort-toggle" class="btn btn--outline">Řadit</label>
-				<label for="filter-toggle" class="btn btn--outline">Filtr</label>
+				<label for="sort-toggle" class="catalog__control-btn">Řadit</label>
+				<label for="filter-toggle" class="catalog__control-btn">Filtr</label>
 			</div>
 			<div class="catalog__grid">
 				<!-- produkty budou vykresleny jako karty -->
 				<article class="product-card">
-					<img src="./assets/images/H2.png" alt="Abyssal Echo">
-					<h3>Abyssal Echo</h3>
+					<div class="product-card__image">
+						<img src="./assets/images/H2.png" alt="Abyssal Echo">
+					</div>
+					<div class="product-card__body">
+						<span class="product-card__category">Akční</span>
+						<h3 class="product-card__title">Abyssal Echo</h3>
+						<p class="product-card__description">Ponořte se do temných hlubin oceánu a objevte tajemství minulé civilizace.</p>
+						<div class="product-card__price">29,99 €</div>
+						<a href="./produkt.html" class="product-card__link">Více informací</a>
+					</div>
 				</article>
 				<article class="product-card">
-					<img src="./assets/images/H3.png" alt="Game 2">
-					<h3>Projekt B</h3>
+					<div class="product-card__image">
+						<img src="./assets/images/H3.png" alt="Projekt B">
+					</div>
+					<div class="product-card__body">
+						<span class="product-card__category">RPG</span>
+						<h3 class="product-card__title">Projekt B</h3>
+						<p class="product-card__description">Epická fantasy příběh s bohatým světem a zajímavými postavami.</p>
+						<div class="product-card__price">39,99 €</div>
+						<a href="./produkt.html" class="product-card__link">Více informací</a>
+					</div>
 				</article>
 			</div>
 		</section>
@@ -72,7 +91,23 @@
 
 	<footer class="site-footer">
 		<div class="site-footer__inner">
-			<p class="site-footer__copy">Copyright &copy; Stellar Dynamics</p>
+			<div class="site-footer__content">
+				<div class="site-footer__section">
+					<h3>O nás</h3>
+					<p>Stellar Dynamics je nezávislé studio zaměřené na vytváření jedinečných herních zážitků.</p>
+				</div>
+				<div class="site-footer__section">
+					<h3>Produkty</h3>
+					<p><a href="./produkty.html">Všechny hry</a></p>
+					<p><a href="./index.html">Domů</a></p>
+				</div>
+				<div class="site-footer__section">
+					<h3>Kontakt</h3>
+					<p><a href="./kontakty.html">Kontaktujte nás</a></p>
+					<p><a href="mailto:info@stellardynamics.com">info@stellardynamics.com</a></p>
+				</div>
+			</div>
+			<p class="site-footer__copy">Copyright &copy; 2025 Stellar Dynamics. Všechna práva vyhrazena.</p>
 		</div>
 	</footer>
 

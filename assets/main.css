@@ -94,6 +94,7 @@
     .site-header__logo img {
         width: 2.5rem;
         height: auto;
+        color: var(--text);
     }
 
     /* desktop nav — skryté na mobilu */

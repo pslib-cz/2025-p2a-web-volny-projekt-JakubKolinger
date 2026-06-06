@@ -146,6 +146,12 @@
     gap: 1rem;
 }
 
+.product-detail__specs {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
 .feature-card {
     background-color: var(--bg-alt);
     border: 1px solid var(--border);
@@ -169,6 +175,9 @@
 
 .product-specs--requirements {
     padding: 1rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: .65rem;
 }
 
 .product-specs__title {
@@ -394,6 +403,14 @@
     .product-detail__info {
         gap: 2rem;
         align-content: start;
+    }
+
+    .product-detail__features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .product-detail__specs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .product-detail__title {

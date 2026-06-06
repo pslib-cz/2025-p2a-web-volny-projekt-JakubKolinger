@@ -246,6 +246,21 @@
         flex: 0 0 22rem;
     }
 
+    /* desktop: obrázek vedle textu */
+    .news__card {
+        display: grid;
+        grid-template-columns: 38% 1fr;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .news__card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: auto;
+    }
+
     .values__inner {
         grid-template-columns: 1fr 1fr;
         align-items: center;

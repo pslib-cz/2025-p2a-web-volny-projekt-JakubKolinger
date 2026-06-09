@@ -1,162 +1,84 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Produkty | Stellar Dynamics</title>
-	<link rel="stylesheet" href="./assets/main.css">
-	<link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkty | Stellar Dynamics</title>
+    <link rel="stylesheet" href="./assets/main.css">
 </head>
 <body>
+    <input type="checkbox" id="burger-toggle" class="burger-toggle" style="display:none;">
+    <input type="checkbox" id="sort-toggle" style="display:none;">
+    <input type="checkbox" id="filter-toggle" style="display:none;">
 
-	<input type="checkbox" id="burger-toggle" class="burger-toggle">
-	<input type="checkbox" id="settings-toggle" class="settings-toggle">
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="./index.html">
+                <img src="./assets/images/logo.svg" alt="Logo" width="40" height="40">
+                Stellar Dynamics
+            </a>
+            <nav class="site-header__nav">
+                <menu>
+                    <li><a href="./index.html">Domov</a></li>
+                    <li><a href="./produkty.html" aria-current="page">Produkty</a></li>
+                    <li><a href="./kontakty.html">Kontakty</a></li>
+                </menu>
+            </nav>
+            <label for="burger-toggle" class="burger-btn">&#9776;</label>
+        </div>
+    </header>
 
-	<header class="site-header">
-		<div class="site-header__inner">
-			<a class="site-header__logo" href="./index.html">
-				<img src="./assets/images/logo.svg" alt="Logo Stellar Dynamics" width="40" height="40">
-				Stellar Dynamics
-			</a>
-			<nav class="site-header__nav" aria-label="Hlavní navigace">
-				<menu>
-					<li><a href="./index.html">Domov</a></li>
-					<li><a href="./produkty.html" aria-current="page">Produkty</a></li>
-					<li><a href="./kontakty.html">Kontakty</a></li>
-				</menu>
-			</nav>
-			<div class="site-header__actions">
-				<label class="login-btn" for="modal-toggle" aria-label="Přihlásit se">Log in</label>
-				<label class="settings-btn" for="settings-toggle" aria-label="Nastavení">
-					<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-						<path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.92c.04-.33.07-.67.07-1.08s-.03-.74-.07-1.08l2.32-1.81c.21-.16.27-.46.13-.7l-2.2-3.81c-.13-.23-.43-.31-.66-.23l-2.74 1.1c-.57-.44-1.18-.8-1.86-1.07L14.05 2.6C14 2.35 13.78 2.17 13.53 2.17h-4.4c-.26 0-.48.18-.52.43L8.22 5.27c-.68.27-1.3.63-1.86 1.07L3.62 5.24c-.24-.09-.53 0-.67.23L.75 9.28c-.14.24-.08.54.13.7l2.32 1.81C3.16 12.26 3.13 12.6 3.13 13s.03.74.07 1.08L.88 15.89c-.21.16-.27.46-.13.7l2.2 3.81c.13.23.43.31.66.23l2.74-1.1c.57.44 1.18.8 1.86 1.07l.39 2.67c.05.25.27.43.52.43h4.4c.26 0 .47-.18.52-.43l.39-2.67c.68-.27 1.3-.63 1.86-1.07l2.74 1.1c.23.09.53 0 .66-.23l2.2-3.81c.14-.24.08-.54-.13-.7l-2.32-1.81z"/>
-					</svg>
-				</label>
-				<label class="burger-btn" for="burger-toggle" aria-label="Otevřít menu">
-					<span></span>
-					<span></span>
-					<span></span>
-				</label>
-			</div>
-		</div>
-		<nav class="mobile-nav" aria-label="Mobilní navigace">
-			<menu>
-				<li><a href="./index.html">Domov</a></li>
-				<li><a href="./produkty.html">Produkty</a></li>
-				<li><a href="./kontakty.html">Kontakty</a></li>
-			</menu>
-		</nav>
-	</header>
+    <main class="catalog">
+        <h1 class="section-title" style="margin: 2rem 1.25rem 1rem;">Naše Produkty</h1>
+        
+        <div class="catalog__controls">
+            <label for="filter-toggle" class="control-btn">Filter</label>
+            <label for="sort-toggle" class="control-btn">Sort</label>
+        </div>
 
-	<main>
-		<section class="produkty-hero">
-			<h1>Naše hry</h1>
-			<p>Objevte fascinující katalog her od Stellar Dynamics. Každá hra je navržena s péčí a inovací.</p>
-		</section>
+        <div class="product-grid">
+            <article class="product-card">
+                <div class="product-card__media">
+                    <img src="./assets/images/abyssal_thumb.png" alt="Abyssal Echo" onerror="this.style.display='none';">
+                    <span>Abyssal Echo</span>
+                </div>
+                <div class="product-card__content">
+                    <h2 class="product-card__title">Abyssal Echo</h2>
+                    <p class="product-card__description">Vstupte do světa, kde ticho znamená smrt a zvuk je vaším jediným kompasem. Atmosférický thriller z mořských hlubin.</p>
+                    <div class="product-card__footer">
+                        <span class="product-card__price">Již brzy</span>
+                        <a href="./produkt.html" class="btn btn--primary">Detail hry</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
 
-		<section class="catalog">
-			<div class="catalog__controls">
-				<label for="sort-toggle" class="catalog__control-btn">Řadit</label>
-				<label for="filter-toggle" class="catalog__control-btn">Filtr</label>
-			</div>
-			<div class="catalog__grid">
-				<!-- produkty budou vykresleny jako karty -->
-				<article class="product-card">
-					<div class="product-card__image">
-						<img src="./assets/images/H2.png" alt="Abyssal Echo">
-					</div>
-					<div class="product-card__body">
-						<span class="product-card__category">Akční</span>
-						<h3 class="product-card__title">Abyssal Echo</h3>
-						<p class="product-card__description">Ponořte se do temných hlubin oceánu a objevte tajemství minulé civilizace.</p>
-						<div class="product-card__price">29,99 €</div>
-						<a href="./produkt.html" class="product-card__link">Více informací</a>
-					</div>
-				</article>
-				<article class="product-card">
-					<div class="product-card__image">
-						<img src="./assets/images/H3.png" alt="Projekt B">
-					</div>
-					<div class="product-card__body">
-						<span class="product-card__category">RPG</span>
-						<h3 class="product-card__title">Projekt B</h3>
-						<p class="product-card__description">Epická fantasy příběh s bohatým světem a zajímavými postavami.</p>
-						<div class="product-card__price">39,99 €</div>
-						<a href="./produkt.html" class="product-card__link">Více informací</a>
-					</div>
-				</article>
-			</div>
-		</section>
-	</main>
+    <div class="panel-overlay filter-overlay">
+        <div class="panel">
+            <label class="panel__close" for="filter-toggle">&times;</label>
+            <h3 style="margin-bottom:1rem; font-family:'Exo 2';">Filtrovat platformy</h3>
+            <div style="display:grid; gap:0.5rem;">
+                <label><input type="checkbox"> Steam</label>
+                <label><input type="checkbox"> PlayStation 5</label>
+                <label><input type="checkbox"> Xbox Series X</label>
+            </div>
+        </div>
+    </div>
 
-	<footer class="site-footer">
-		<div class="site-footer__inner">
-			<div class="site-footer__content">
-				<div class="site-footer__section">
-					<h3>O nás</h3>
-					<p>Stellar Dynamics je nezávislé studio zaměřené na vytváření jedinečných herních zážitků.</p>
-				</div>
-				<div class="site-footer__section">
-					<h3>Produkty</h3>
-					<p><a href="./produkty.html">Všechny hry</a></p>
-					<p><a href="./index.html">Domů</a></p>
-				</div>
-				<div class="site-footer__section">
-					<h3>Kontakt</h3>
-					<p><a href="./kontakty.html">Kontaktujte nás</a></p>
-					<p><a href="mailto:info@stellardynamics.com">info@stellardynamics.com</a></p>
-				</div>
-			</div>
-			<p class="site-footer__copy">Copyright &copy; 2025 Stellar Dynamics. Všechna práva vyhrazena.</p>
-		</div>
-	</footer>
+    <div class="panel-overlay sort-overlay">
+        <div class="panel">
+            <label class="panel__close" for="sort-toggle">&times;</label>
+            <h3 style="margin-bottom:1rem; font-family:'Exo 2';">Řadit podle</h3>
+            <div style="display:grid; gap:0.5rem;">
+                <label><input type="radio" name="s" checked> Nejnovější</label>
+                <label><input type="radio" name="s"> Podle abecedy</label>
+            </div>
+        </div>
+    </div>
 
-	<input type="checkbox" id="modal-toggle" class="modal-toggle">
-	<input type="checkbox" id="sort-toggle" class="sort-toggle">
-	<input type="checkbox" id="filter-toggle" class="filter-toggle">
-
-	<div class="modal-overlay">
-		<div class="modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
-			<label class="modal__close" for="modal-toggle" aria-label="Zavřít">&times;</label>
-			<p id="login-title" class="modal__title">Přihlášení</p>
-			<form class="login-form" action="#" method="post" novalidate>
-				<label class="field">
-					<span class="field__label">E-mail</span>
-					<input class="field__input" type="email" name="email" required placeholder="you@example.com">
-				</label>
-				<label class="field">
-					<span class="field__label">Heslo</span>
-					<input class="field__input" type="password" name="password" required placeholder="••••••••">
-				</label>
-				<div style="display:flex;gap:.5rem;align-items:center;margin-top:1rem;">
-					<button class="btn btn--primary" type="submit">Přihlásit</button>
-					<label for="modal-toggle" class="btn btn--outline" style="cursor:pointer;">Zavřít</label>
-				</div>
-			</form>
-		</div>
-	</div>
-
-	<div class="panel-overlay sort-overlay">
-		<div class="panel">
-			<label class="panel__close" for="sort-toggle" aria-label="Zavřít">&times;</label>
-			<p class="panel__title">Řadit</p>
-			<nav class="panel__list">
-				<label><input type="radio" name="sort" checked> Nejnovější</label>
-				<label><input type="radio" name="sort"> Nejdříve</label>
-			</nav>
-		</div>
-	</div>
-
-	<div class="panel-overlay filter-overlay">
-		<div class="panel">
-			<label class="panel__close" for="filter-toggle" aria-label="Zavřít">&times;</label>
-			<p class="panel__title">Filtr</p>
-			<nav class="panel__list">
-				<label><input type="checkbox" name="platform"> Itch.io</label>
-				<label><input type="checkbox" name="platform"> Steam</label>
-			</nav>
-		</div>
-	</div>
-
+    <footer class="site-footer">
+        <p>&copy; 2026 Stellar Dynamics. Všechna práva vyhrazena.</p>
+    </footer>
 </body>
 </html>

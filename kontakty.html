@@ -5,187 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakty | Stellar Dynamics</title>
     <link rel="stylesheet" href="./assets/main.css">
-    <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
 </head>
 <body>
-    <input type="checkbox" id="burger-toggle" class="burger-toggle">
-    <input type="checkbox" id="settings-toggle" class="settings-toggle">
-
     <header class="site-header">
         <div class="site-header__inner">
             <a class="site-header__logo" href="./index.html">
-                <img src="./assets/images/logo.svg" alt="Logo Stellar Dynamics" width="40" height="40">
+                <img src="./assets/images/logo.svg" alt="Logo" width="40" height="40">
                 Stellar Dynamics
             </a>
-            <nav class="site-header__nav" aria-label="Hlavní navigace">
+            <nav class="site-header__nav">
                 <menu>
                     <li><a href="./index.html">Domov</a></li>
                     <li><a href="./produkty.html">Produkty</a></li>
                     <li><a href="./kontakty.html" aria-current="page">Kontakty</a></li>
                 </menu>
             </nav>
-            <div class="site-header__actions">
-                <label class="login-btn" for="modal-toggle" aria-label="Přihlásit se">Log in</label>
-                <label class="settings-btn" for="settings-toggle" aria-label="Nastavení">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.92c.04-.33.07-.67.07-1.08s-.03-.74-.07-1.08l2.32-1.81c.21-.16.27-.46.13-.7l-2.2-3.81c-.13-.23-.43-.31-.66-.23l-2.74 1.1c-.57-.44-1.18-.8-1.86-1.07L14.05 2.6C14 2.35 13.78 2.17 13.53 2.17h-4.4c-.26 0-.48.18-.52.43L8.22 5.27c-.68.27-1.3.63-1.86 1.07L3.62 5.24c-.24-.09-.53 0-.67.23L.75 9.28c-.14.24-.08.54.13.7l2.32 1.81C3.16 12.26 3.13 12.6 3.13 13s.03.74.07 1.08L.88 15.89c-.21.16-.27.46-.13.7l2.2 3.81c.13.23.43.31.66.23l2.74-1.1c.57.44 1.18.8 1.86 1.07l.39 2.67c.05.25.27.43.52.43h4.4c.26 0 .47-.18.52-.43l.39-2.67c.68-.27 1.3-.63 1.86-1.07l2.74 1.1c.23.09.53 0 .66-.23l2.2-3.81c.14-.24.08-.54-.13-.7l-2.32-1.81z"/>
-                    </svg>
-                </label>
-                <label class="burger-btn" for="burger-toggle" aria-label="Otevřít menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
         </div>
-        <nav class="mobile-nav" aria-label="Mobilní navigace">
-            <menu>
-                <li><a href="./index.html">Domov</a></li>
-                <li><a href="./produkty.html">Produkty</a></li>
-                <li><a href="./kontakty.html">Kontakty</a></li>
-            </menu>
-        </nav>
     </header>
 
-    <main>
-        <section class="contacts">
-            <div class="contacts__top">
-                <h1>Kontaktujte nás</h1>
-                <p class="contacts__intro">Máte otázku, nápad nebo spolupráci? Napište nám a společně vytvoříme něco výjimečného.</p>
-            </div>
-
-            <div class="contacts__layout">
-                <div class="contacts__grid">
-                <div class="contact-info">
-                    <h3>Adresa</h3>
-                    <p>
-                        Stellar Dynamics<br>
-                        Hvězdná ulice 42<br>
-                        110 00 Praha 1<br>
-                        Česká republika
-                    </p>
+    <main class="contacts-page">
+        <h1 class="section-title" style="text-align:center; margin-top:2rem;">Kontaktujte nás</h1>
+        
+        <div class="contacts-layout">
+            <div class="contacts-info-pane">
+                <div class="info-card">
+                    <h3>Obecná Podpora</h3>
+                    <p>support@stellardynamics.pslib.cz</p>
                 </div>
-
-                <div class="contact-info">
-                    <h3>Email</h3>
-                    <p>
-                        <strong>Obecné dotazy:</strong><br>
-                        <a href="mailto:info@stellardynamics.com">info@stellardynamics.com</a>
-                    </p>
-                    <p>
-                        <strong>Podpora hráčů:</strong><br>
-                        <a href="mailto:support@stellardynamics.com">support@stellardynamics.com</a>
-                    </p>
-                </div>
-
-                <div class="contact-info">
-                    <h3>Telefon</h3>
-                    <p>
-                        <strong>Pondělí - Pátek:</strong><br>
-                        9:00 - 17:00 CET<br>
-                        <a href="tel:+420222222222">+420 222 222 222</a>
-                    </p>
+                <div class="info-card">
+                    <h3>Studio lokace</h3>
+                    <p>Liberec, Česká Republika</p>
                 </div>
             </div>
 
-            </div>
+            <form class="contact-form" id="contact-form" onsubmit="event.preventDefault(); alert('Zpráva byla úspěšně odeslána!');">
+                <div class="form-group row-anon">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="anon-checkbox">
+                        <span class="custom-checkmark"></span>
+                        Poslat zprávu anonymně
+                    </label>
+                </div>
 
-            <form class="contact-form" action="#" method="post" novalidate>
-                <h2>Napište nám</h2>
-                
-                <div class="form-group">
-                    <label for="contact-name">Vaše jméno</label>
-                    <input id="contact-name" type="text" name="name" required placeholder="Jan Novák">
+                <div class="form-group" id="name-group">
+                    <label for="sender-name">Vaše jméno / přezdívka</label>
+                    <input type="text" id="sender-name" placeholder="Zadejte jméno..." required>
                 </div>
 
                 <div class="form-group">
-                    <label for="contact-email">E-mailová adresa</label>
-                    <input id="contact-email" type="email" name="email" required placeholder="vase@email.com">
+                    <label for="sender-msg">Zpráva</label>
+                    <textarea id="sender-msg" rows="5" placeholder="Napište nám text vaší zprávy..." required></textarea>
                 </div>
 
-                <div class="form-group">
-                    <label for="contact-subject">Předmět</label>
-                    <input id="contact-subject" type="text" name="subject" required placeholder="Příklad: Dotaz na hru...">
-                </div>
-
-                <div class="form-group">
-                    <label for="contact-message">Zpráva</label>
-                    <textarea id="contact-message" name="message" required placeholder="Napište vaši zprávu..."></textarea>
-                </div>
-
-                <button type="submit" class="form-submit">Odeslat zprávu</button>
+                <button type="submit" class="btn btn--primary">Odeslat feedback</button>
             </form>
-        </section>
+        </div>
     </main>
 
     <footer class="site-footer">
-        <div class="site-footer__inner">
-            <div class="site-footer__content">
-                <div class="site-footer__section">
-                    <h3>O nás</h3>
-                    <p>Stellar Dynamics je nezávislé studio zaměřené na vytváření jedinečných herních zážitků.</p>
-                </div>
-                <div class="site-footer__section">
-                    <h3>Produkty</h3>
-                    <p><a href="./produkty.html">Všechny hry</a></p>
-                    <p><a href="./index.html">Domů</a></p>
-                </div>
-                <div class="site-footer__section">
-                    <h3>Kontakt</h3>
-                    <p><a href="./kontakty.html">Kontaktujte nás</a></p>
-                    <p><a href="mailto:info@stellardynamics.com">info@stellardynamics.com</a></p>
-                </div>
-            </div>
-            <p class="site-footer__copy">Copyright &copy; 2025 Stellar Dynamics. Všechna práva vyhrazena.</p>
-        </div>
+        <p>&copy; 2026 Stellar Dynamics. Všechna práva vyhrazena.</p>
     </footer>
 
-    <input type="checkbox" id="modal-toggle" class="modal-toggle">
-    <input type="checkbox" id="sort-toggle" class="sort-toggle">
-    <input type="checkbox" id="filter-toggle" class="filter-toggle">
+    <script>
+        const anonCheckbox = document.getElementById('anon-checkbox');
+        const nameGroup = document.getElementById('name-group');
+        const nameInput = document.getElementById('sender-name');
 
-    <div class="modal-overlay">
-        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
-            <label class="modal__close" for="modal-toggle" aria-label="Zavřít">&times;</label>
-            <p id="login-title" class="modal__title">Přihlášení</p>
-            <form class="login-form" action="#" method="post" novalidate>
-                <label class="field">
-                    <span class="field__label">E-mail</span>
-                    <input class="field__input" type="email" name="email" required placeholder="you@example.com">
-                </label>
-                <label class="field">
-                    <span class="field__label">Heslo</span>
-                    <input class="field__input" type="password" name="password" required placeholder="••••••••">
-                </label>
-                <div style="display:flex;gap:.5rem;align-items:center;margin-top:1rem;">
-                    <button class="btn btn--primary" type="submit">Přihlásit</button>
-                    <label for="modal-toggle" class="btn btn--outline" style="cursor:pointer;">Zavřít</label>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="panel-overlay sort-overlay">
-        <div class="panel">
-            <label class="panel__close" for="sort-toggle" aria-label="Zavřít">&times;</label>
-            <p class="panel__title">Řadit</p>
-            <nav class="panel__list">
-                <label><input type="radio" name="sort" checked> Nejnovější</label>
-                <label><input type="radio" name="sort"> Nejdříve</label>
-            </nav>
-        </div>
-    </div>
-
-    <div class="panel-overlay filter-overlay">
-        <div class="panel">
-            <label class="panel__close" for="filter-toggle" aria-label="Zavřít">&times;</label>
-            <p class="panel__title">Filtr</p>
-            <nav class="panel__list">
-                <label><input type="checkbox" name="platform"> Itch.io</label>
-                <label><input type="checkbox" name="platform"> Steam</label>
-            </nav>
-        </div>
-    </div>
-
+        anonCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                nameGroup.style.display = 'none'; // Čistě skryje pole z layoutu
+                nameInput.removeAttribute('required'); // Vypne HTML5 validaci povinného pole
+                nameInput.value = ''; // Vyčistí případný zadaný text
+            } else {
+                nameGroup.style.display = 'flex'; // Navrátí pole do flexboxu formuláře
+                nameInput.setAttribute('required', 'required'); // Zapne zpět povinnost vyplnění
+            }
+        });
+    </script>
 </body>
 </html>

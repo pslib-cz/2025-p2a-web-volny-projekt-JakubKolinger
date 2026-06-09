@@ -32,6 +32,10 @@
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.75rem;
 }
+.full-article__content {
+    display: grid;
+    gap: 1.75rem;
+}
 .full-article__content p {
     line-height: 1.7;
     margin-bottom: 1.25rem;

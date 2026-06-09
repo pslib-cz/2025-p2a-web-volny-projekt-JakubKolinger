@@ -3,83 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produkty | Stellar Dynamics</title>
+    <title>Naše produkty | Stellar Dynamics</title>
     <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
     <link rel="stylesheet" href="./assets/main.css">
 </head>
 <body>
-    <input type="checkbox" id="burger-toggle" class="burger-toggle" style="display:none;">
-    <input type="checkbox" id="sort-toggle" style="display:none;">
+
+    <input type="checkbox" id="burger-toggle" style="display:none;">
     <input type="checkbox" id="filter-toggle" style="display:none;">
+    <input type="checkbox" id="sort-toggle" style="display:none;">
+    <input type="checkbox" id="modal-toggle" style="display:none;">
+    <input type="checkbox" id="lang-toggle" style="display:none;">
 
     <header class="site-header">
         <div class="site-header__inner">
-            <a class="site-header__logo" href="./index.html">
-                <img src="./assets/images/logo.svg" alt="Logo" width="40" height="40">
+            <a href="./index.html" class="site-header__logo">
+                <img src="./assets/images/logo.svg" alt="Stellar Dynamics" width="48" height="48">
                 Stellar Dynamics
             </a>
             <nav class="site-header__nav">
                 <menu>
-                    <li><a href="./index.html">Domov</a></li>
-                    <li><a href="./produkty.html" aria-current="page">Produkty</a></li>
-                    <li><a href="./kontakty.html">Kontakty</a></li>
+                    <li><a href="./index.html">DOMOV</a></li>
+                    <li><a href="./produkty.html" aria-current="page">PRODUKTY</a></li>
+                    <li><a href="./kontakty.html">KONTAKTY</a></li>
                 </menu>
             </nav>
-            <label for="burger-toggle" class="burger-btn">&#9776;</label>
+            <div class="site-header__actions">
+                <label for="lang-toggle" class="btn-lang">Jazyk</label>
+                <label for="modal-toggle" class="btn btn--primary">LOG IN</label>
+                <label for="burger-toggle" class="burger-btn">☰</label>
+            </div>
         </div>
     </header>
 
-    <main class="catalog">
-        <h1 class="section-title" style="margin: 2rem 1.25rem 1rem;">Naše Produkty</h1>
-        
-        <div class="catalog__controls">
-            <label for="filter-toggle" class="control-btn">Filter</label>
-            <label for="sort-toggle" class="control-btn">Sort</label>
-        </div>
+    <main>
+        <section class="catalog">
+            <h1 style="text-align:center; font-family:'Exo 2',sans-serif; text-transform:uppercase; margin-bottom:2rem;">Naše produkty</h1>
 
-        <div class="product-grid">
-            <article class="product-card">
-                <div class="product-card__media">
-                    <img src="./assets/images/abyssal_thumb.png" alt="Abyssal Echo" onerror="this.style.display='none';">
-                    <span>Abyssal Echo</span>
-                </div>
-                <div class="product-card__content">
-                    <h2 class="product-card__title">Abyssal Echo</h2>
-                    <p class="product-card__description">Vstupte do světa, kde ticho znamená smrt a zvuk je vaším jediným kompasem. Atmosférický thriller z mořských hlubin.</p>
-                    <div class="product-card__footer">
-                        <span class="product-card__price">Již brzy</span>
-                        <a href="./produkt.html" class="btn btn--primary">Detail hry</a>
+            <div class="catalog__controls">
+                <label for="filter-toggle" class="control-btn">Filter</label>
+                <label for="sort-toggle" class="control-btn">Sort</label>
+            </div>
+
+            <div class="product-grid">
+                <!-- Abyssal Echo -->
+                <a href="./produkt.html" class="product-card">
+                    <div class="product-card__media">
+                        <img src="./assets/images/H1P4.png" alt="Abyssal Echo" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Abyssal Echo</h3>
+                        <p class="product-card__description">
+                            Vstupte do světa, kde ticho znamená smrt a zvuk je vaším jediným kompasem. Atmosférický thriller z mořských hlubin.
+                        </p>
+                        <div class="product-card__footer">
+                            <span style="color:var(--accent); font-weight:700;">Již brzy</span>
+                            <span class="btn btn--primary" style="font-size:0.85rem; padding:0.4rem 1rem;">Detail hry</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Další placeholder hry -->
+                <div class="product-card">
+                    <div class="product-card__media">
+                        <img src="./assets/images/H1P2.png" alt="HRA2" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">HRA2</h3>
+                        <p class="product-card__description">
+                            Vstupte do světa, kde ticho znamená smrt a zvuk je vaším jediným kompasem.
+                        </p>
+                        <div class="product-card__footer">
+                            <span style="color:var(--accent); font-weight:700;">Již brzy</span>
+                        </div>
                     </div>
                 </div>
-            </article>
-        </div>
+
+                <div class="product-card">
+                    <div class="product-card__media">
+                        <img src="./assets/images/H1P3.png" alt="Hra 3" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">dlouhej název hry 3</h3>
+                        <p class="product-card__description">
+                            Vstupte do světa, kde ticho znamená smrt a zvuk je vaším jediným kompasem.
+                        </p>
+                        <div class="product-card__footer">
+                            <span style="color:var(--accent); font-weight:700;">Již brzy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <footer class="site-footer">
+        <p>Copyright © Stellar Dynamics 2026. Všechna práva vyhrazena. | <a href="#">Merch</a></p>
+    </footer>
+
+    <!-- Filter Modal -->
     <div class="panel-overlay filter-overlay">
         <div class="panel">
-            <label class="panel__close" for="filter-toggle">&times;</label>
-            <h3 style="margin-bottom:1rem; font-family:'Exo 2';">Filtrovat platformy</h3>
-            <div style="display:grid; gap:0.5rem;">
-                <label><input type="checkbox"> Steam</label>
-                <label><input type="checkbox"> PlayStation 5</label>
-                <label><input type="checkbox"> Xbox Series X</label>
-            </div>
+            <label for="filter-toggle" class="panel__close">×</label>
+            <h3>Filtrovat platformy</h3>
+            <label style="display:block; margin:0.8rem 0;"><input type="checkbox" checked> Steam</label>
+            <label style="display:block; margin:0.8rem 0;"><input type="checkbox"> Epic Games</label>
+            <label style="display:block; margin:0.8rem 0;"><input type="checkbox"> Xbox</label>
+            <label style="display:block; margin:0.8rem 0;"><input type="checkbox"> PlayStation</label>
         </div>
     </div>
 
+    <!-- Sort Modal -->
     <div class="panel-overlay sort-overlay">
         <div class="panel">
-            <label class="panel__close" for="sort-toggle">&times;</label>
-            <h3 style="margin-bottom:1rem; font-family:'Exo 2';">Řadit podle</h3>
-            <div style="display:grid; gap:0.5rem;">
-                <label><input type="radio" name="s" checked> Nejnovější</label>
-                <label><input type="radio" name="s"> Podle abecedy</label>
-            </div>
+            <label for="sort-toggle" class="panel__close">×</label>
+            <h3>Řadit podle</h3>
+            <button class="btn" style="width:100%; text-align:left; margin-bottom:0.5rem;">Nejnovější</button>
+            <button class="btn" style="width:100%; text-align:left;">Podle abecedy</button>
         </div>
     </div>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 Stellar Dynamics. Všechna práva vyhrazena.</p>
-    </footer>
+    <!-- Login & Language modals (same as index) -->
+    <div class="panel-overlay login-overlay">
+        <div class="panel">
+            <label for="modal-toggle" class="panel__close">×</label>
+            <h2>LOG IN</h2>
+            <form style="display:grid; gap:1.2rem;">
+                <input type="email" placeholder="E-mail" style="padding:1rem;">
+                <input type="password" placeholder="Heslo" style="padding:1rem;">
+                <button type="button" class="btn btn--primary">Přihlásit se</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel-overlay lang-overlay">
+        <div class="panel">
+            <label for="lang-toggle" class="panel__close">×</label>
+            <h2>Jazyk</h2>
+            <button class="btn" style="width:100%; text-align:left;">Čeština (CZ)</button>
+            <button class="btn" style="width:100%; text-align:left;">English (EN)</button>
+        </div>
+    </div>
+
 </body>
 </html>

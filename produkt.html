@@ -5,62 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abyssal Echo | Stellar Dynamics</title>
     <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css">
     <link rel="stylesheet" href="./assets/main.css">
 </head>
 <body>
-    <input type="checkbox" id="burger-toggle" class="burger-toggle" style="display:none;">
+
+    <input type="checkbox" id="burger-toggle" style="display:none;">
+    <input type="checkbox" id="modal-toggle" style="display:none;">
+    <input type="checkbox" id="lang-toggle" style="display:none;">
+
     <header class="site-header">
         <div class="site-header__inner">
-            <a class="site-header__logo" href="./index.html">
-                <img src="./assets/images/logo.svg" alt="Logo" width="40" height="40">
+            <a href="./index.html" class="site-header__logo">
+                <img src="./assets/images/logo.svg" alt="Stellar Dynamics" width="48" height="48">
                 Stellar Dynamics
             </a>
             <nav class="site-header__nav">
                 <menu>
-                    <li><a href="./index.html">Domov</a></li>
-                    <li><a href="./produkty.html">Produkty</a></li>
-                    <li><a href="./kontakty.html">Kontakty</a></li>
+                    <li><a href="./index.html">DOMOV</a></li>
+                    <li><a href="./produkty.html">PRODUKTY</a></li>
+                    <li><a href="./kontakty.html">KONTAKTY</a></li>
                 </menu>
             </nav>
-            <label for="burger-toggle" class="burger-btn" aria-label="Otevřít menu">&#9776;</label>
+            <div class="site-header__actions">
+                <label for="lang-toggle" class="btn-lang">Jazyk</label>
+                <label for="modal-toggle" class="btn btn--primary">LOG IN</label>
+                <label for="burger-toggle" class="burger-btn">☰</label>
+            </div>
         </div>
     </header>
 
     <main class="product-detail">
-        <h1 class="detail-title">Abyssal Echo</h1>
-        <p class="detail-lead">Vstupte do světa, kde ticho znamená smrt a zvuk je vaším jediným kompasem.</p>
+        <div style="max-width:1200px; margin:0 auto; padding:2rem 1.25rem;">
+            
+            <!-- Hlavní obrázek -->
+            <img src="./assets/images/H1P4.png" alt="Abyssal Echo" style="width:100%; max-height:520px; object-fit:cover; border-radius:12px; margin-bottom:2rem;">
 
-        <div class="product-gallery" id="lightgallery">
-            <a href="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200" data-src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200" class="gallery-thumb">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400" alt="Hlubina 1">
-                <div class="gallery-overlay">Zvětšit screenshot</div>
-            </a>
-            <a href="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200" data-src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200" class="gallery-thumb">
-                <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400" alt="Sonar Wave">
-                <div class="gallery-overlay">Zvětšit screenshot</div>
-            </a>
-        </div>
+            <h1 class="detail-title">Abyssal Echo</h1>
+            <p class="detail-lead" style="font-size:1.35rem; line-height:1.5;">
+                SLYŠTE ECHO HLUBIN. PŘICHÁZÍ ABYSSAL ECHO.
+            </p>
 
-        <section class="requirements-section">
-            <h2 style="font-family:'Exo 2'; margin-bottom:1.5rem; text-transform:uppercase; color:var(--accent);">Systémové požadavky</h2>
+            <p style="font-size:1.1rem; line-height:1.8; max-width:800px;">
+                Vstupte do světa, kde ticho znamená smrt a zvuk je vaším jediným kompasem. 
+                V nové hře Abyssal Echo se vydáte do zapomenutých hlubin oceánu, abyste odhalili tajemství civilizace, která komunikovala skrze frekvence.
+            </p>
+
+            <!-- Klíčové vlastnosti -->
+            <h2 style="font-family:'Exo 2',sans-serif; text-transform:uppercase; color:var(--accent); margin:3rem 0 1.5rem;">Klíčové vlastnosti:</h2>
+            <ul style="line-height:1.9; font-size:1.05rem;">
+                <li><strong>Audio-vizuální symfonie:</strong> Kompletní soundtrack a zvukový design vytvořil producent The Rain Shark. Hudba se dynamicky mění podle toho, jak hluboko se potopíte.</li>
+                <li><strong>Unikátní mechanika "Sonar-Pulse":</strong> Používejte zvukové vlny k odhalování skrytých cest a řešení logických hádanek v totální temnotě.</li>
+                <li><strong>Atmosféra, která vás pohltí:</strong> Vizuální styl postavený na kontrastu chladných hlubin a zlatých technologií (inspirovaný naší exkluzivní color palettou).</li>
+            </ul>
+
+            <!-- Galerie -->
+            <div class="product-gallery" style="margin:3rem 0;">
+                <div class="gallery-thumb"><img src="./assets/images/H1P4.png" alt="Screenshot 1"></div>
+                <div class="gallery-thumb"><img src="./assets/images/H1P2.png" alt="Screenshot 2"></div>
+                <div class="gallery-thumb"><img src="./assets/images/H1P3.png" alt="Screenshot 3"></div>
+            </div>
+
+            <!-- Platformy -->
+            <div style="margin:3rem 0;">
+                <h3 style="margin-bottom:1rem; color:var(--accent);">Dostupnost:</h3>
+                <div style="display:flex; flex-wrap:wrap; gap:1rem;">
+                    <a href="#" class="btn" style="background:#1B7BFF; color:white; padding:0.9rem 2rem;">Steam</a>
+                    <a href="#" class="btn" style="background:#2F2F2F; color:white; padding:0.9rem 2rem;">Epic Games</a>
+                    <a href="#" class="btn" style="background:#0E7A0D; color:white; padding:0.9rem 2rem;">Xbox</a>
+                    <a href="#" class="btn" style="background:#003087; color:white; padding:0.9rem 2rem;">PlayStation</a>
+                </div>
+            </div>
+
+            <!-- Systémové požadavky -->
+            <h2 style="font-family:'Exo 2',sans-serif; text-transform:uppercase; color:var(--accent); margin:3rem 0 1.5rem;">Systémové požadavky</h2>
             
             <div class="req-table-wrapper">
                 <div class="req-grid req-grid--header">
-                    <div>Komponenta</div>
+                    <div></div>
                     <div>MINIMUM</div>
                     <div>RECOMMENDED</div>
                 </div>
-
+                
                 <div class="req-grid req-grid--row">
                     <div class="req-label">OS</div>
-                    <div>Windows 10</div>
-                    <div>Windows 11</div>
+                    <div>Win 10</div>
+                    <div>Win 11</div>
                 </div>
                 <div class="req-grid req-grid--row">
                     <div class="req-label">CPU</div>
-                    <div>Intel Core i5 @ 2.5 GHz</div>
-                    <div>Intel Core i5 @ 3.0 GHz / AMD Ryzen 5</div>
+                    <div>Intel Core i5 @ 2.5 GHz or equivalent</div>
+                    <div>Intel Core i5 @ 3.0 GHz or AMD Ryzen 5</div>
                 </div>
                 <div class="req-grid req-grid--row">
                     <div class="req-label">RAM</div>
@@ -72,20 +106,40 @@
                     <div>GTX 1060 or RX 6600 XT</div>
                     <div>RTX 2060 or RX 7600 XT</div>
                 </div>
+                <div class="req-grid req-grid--row">
+                    <div class="req-label">STORAGE</div>
+                    <div>4 GB volného místa</div>
+                    <div>6 GB volného místa</div>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Stellar Dynamics. | Merch</p>
+        <p>Copyright © Stellar Dynamics 2026. Všechna práva vyhrazena. | <a href="#">Merch</a></p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
-    <script>
-        lightGallery(document.getElementById('lightgallery'), {
-            speed: 300,
-            download: false
-        });
-    </script>
+    <!-- Modals -->
+    <div class="panel-overlay login-overlay">
+        <div class="panel">
+            <label for="modal-toggle" class="panel__close">×</label>
+            <h2>LOG IN</h2>
+            <form style="display:grid; gap:1.2rem;">
+                <input type="email" placeholder="E-mail" style="padding:1rem; background:var(--bg); border:1px solid var(--border);">
+                <input type="password" placeholder="Heslo" style="padding:1rem; background:var(--bg); border:1px solid var(--border);">
+                <button type="button" class="btn btn--primary">Přihlásit se</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel-overlay lang-overlay">
+        <div class="panel">
+            <label for="lang-toggle" class="panel__close">×</label>
+            <h2>Jazyk</h2>
+            <button class="btn" style="width:100%; text-align:left;">Čeština (CZ)</button>
+            <button class="btn" style="width:100%; text-align:left;">English (EN)</button>
+        </div>
+    </div>
+
 </body>
 </html>

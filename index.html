@@ -3,135 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domov | Stellar Dynamics</title>
+    <title>Stellar Dynamics</title>
     <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg">
     <link rel="stylesheet" href="./assets/main.css">
 </head>
 <body>
 
-    <input type="checkbox" id="burger-toggle" class="burger-toggle" style="display:none;">
+    <input type="checkbox" id="burger-toggle" style="display:none;">
     <input type="checkbox" id="modal-toggle" style="display:none;">
     <input type="checkbox" id="lang-toggle" style="display:none;">
 
     <header class="site-header">
         <div class="site-header__inner">
-            <a class="site-header__logo" href="./index.html">
-                <img src="./assets/images/logo.svg" alt="Logo" width="40" height="40">
+            <a href="./index.html" class="site-header__logo">
+                <img src="./assets/images/logo.svg" alt="Stellar Dynamics" width="48" height="48">
                 Stellar Dynamics
             </a>
             <nav class="site-header__nav">
                 <menu>
-                    <li><a href="./index.html" aria-current="page">Domov</a></li>
-                    <li><a href="./produkty.html">Produkty</a></li>
-                    <li><a href="./kontakty.html">Kontakty</a></li>
+                    <li><a href="./index.html" aria-current="page">DOMOV</a></li>
+                    <li><a href="./produkty.html">PRODUKTY</a></li>
+                    <li><a href="./kontakty.html">KONTAKTY</a></li>
                 </menu>
             </nav>
             <div class="site-header__actions">
-                <label for="lang-toggle" class="btn-lang" style="cursor:pointer; margin-right:1rem;">Jazyk</label>
-                <label for="modal-toggle" class="btn btn--primary" style="cursor:pointer;">LOG IN</label>
-                <label for="burger-toggle" class="burger-btn">&#9776;</label>
+                <label for="lang-toggle" class="btn-lang">Jazyk</label>
+                <label for="modal-toggle" class="btn btn--primary">LOG IN</label>
+                <label for="burger-toggle" class="burger-btn">☰</label>
             </div>
         </div>
     </header>
 
-    <main class="home-main">
+    <main>
+        <!-- Hero -->
         <section class="home-hero">
             <div class="home-hero__panel">
-                <div class="home-hero__content">
-                    <span class="home-hero__eyebrow">Představení studia</span>
-                    <h1 class="home-hero__title">O nás</h1>
-                    <p class="home-hero__text">
-                        Jsme indie studio, které věří, že každá hra by měla být zážitkem, ne transakcí. 
-                        Proto přistupujeme ke každému projektu s pečlivostí řemeslníka: od prvního nápadu až po finální detail. 
-                        Žádné zkratky, žádné kompromisy v kvalitě.
+                <span class="home-hero__eyebrow">INDIE GAME STUDIO</span>
+                <h1 class="home-hero__title">Stellar Dynamics</h1>
+                <p class="home-hero__text">
+                    Jsme indie studio, které věří, že každá hra by měla být zážitkem — ne transakcí. 
+                    Proto přistupujeme ke každému projektu s pečlivostí řemeslníka: od prvního nápadu až po finální detail. 
+                    Žádné zkratky, žádné kompromisy v kvalitě.
+                </p>
+            </div>
+        </section>
+
+        <!-- Novinky -->
+        <section class="news-section">
+            <h2 class="section-title">Novinky</h2>
+            <div class="news__track-wrapper">
+                <div class="news__track">
+                    <article class="news__card">
+                        <div class="news__badge">NOVÝ ZVUK, NOVÁ ÉRA</div>
+                        <h3>Spolupráce s The Rain Shark</h3>
+                        <p>S radostí oznamujeme, že naše studio spojuje síly s producentem The Rain Shark!</p>
+                        <a href="./novinka.html" class="btn" style="margin-top:1rem;">Číst více</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vize a hodnoty -->
+        <section style="max-width:1400px; margin:4rem auto; padding:0 1.25rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 4rem; align-items: center;">
+                <div>
+                    <h2 style="font-family: 'Exo 2', sans-serif; text-transform: uppercase; color: var(--accent);">Naše vize a hodnoty</h2>
+                    <p style="line-height: 1.8; color: var(--text-muted);">
+                        Věříme, že cesta k úspěchu vede přes inovace a lidský přístup. Naším cílem není pouze dodávat produkty, ale vytvářet řešení, která skutečně mění způsob, jakým lidé pracují a žijí.
+                    </p>
+                </div>
+                <img src="./assets/images/H1P1.png" alt="Vize" style="width:100%; border-radius: 12px; box-shadow: var(--shadow);">
+            </div>
+        </section>
+
+        <!-- Historie -->
+        <section style="background: var(--bg-alt); padding: 4rem 1.25rem;">
+            <div style="max-width:1400px; margin:0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 4rem; align-items: center;">
+                <img src="./assets/images/H3.png" alt="Historie" style="width:100%; border-radius: 12px;">
+                <div>
+                    <h2 style="font-family: 'Exo 2', sans-serif; text-transform: uppercase; color: var(--accent);">Historie a milníky</h2>
+                    <p style="line-height:1.8; color:var(--text-muted);">
+                        To, co začalo v roce 2010 jako malý nápad v garáži s dvěma nadšenci, se během let rozrostlo v dynamickou společnost.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section class="news-section">
-            <h2 class="section-title">Novinky</h2>
-            <div class="news__track-wrapper">
-                <div class="news__track" id="news-track">
-                    <article class="news__card">
-                        <div class="news__badge">NOVÝ ZVUK, NOVÁ ÉRA</div>
-                        <h3>Spolupráce s The Rain Shark</h3>
-                        <p>Náš technický a kreativní tým spojuje síly s hudebním producentem The Rain Shark. Společně vyvíjíme revoluční adaptivní audio pro náš nový titul.</p>
-                    </article>
-                    <article class="news__card">
-                        <div class="news__badge">VÝVOJ WEBU</div>
-                        <h3>Spuštění Alpha verze rozhraní</h3>
-                        <p>Dokončili jsme kompletní integraci kaskádových stylů, Grid layoutu a Dark Mode přepínání přesně podle interních dokumentů.</p>
-                    </article>
-                    <article class="news__card">
-                        <div class="news__badge">KOMUNITA</div>
-                        <h3>Otevření komunitního fóra</h3>
-                        <p>Zpětná vazba od komunity je pro nás klíčová. Připojte se k našemu novému komunitnímu hubu a diskutujte s vývojáři.</p>
-                    </article>
-                </div>
-            </div>
-            <div class="carousel-dots" id="carousel-dots">
-                <span class="dot active" data-index="0"></span>
-                <span class="dot" data-index="1"></span>
-                <span class="dot" data-index="2"></span>
-            </div>
+        <!-- Tým -->
+        <section style="max-width:1400px; margin:4rem auto; padding:0 1.25rem; text-align:center;">
+            <h2 style="font-family:'Exo 2',sans-serif; text-transform:uppercase; color:var(--accent);">Náš tým a kultura</h2>
+            <img src="./assets/images/team.png" alt="Náš tým" style="max-width:1100px; width:100%; border-radius:12px; margin-top:2rem;">
         </section>
     </main>
 
+    <footer class="site-footer">
+        <p>Copyright © Stellar Dynamics 2026. Všechna práva vyhrazena. | <a href="#">Merch</a></p>
+    </footer>
+
+    <!-- Login Modal -->
     <div class="panel-overlay login-overlay">
         <div class="panel">
-            <label class="panel__close" for="modal-toggle">&times;</label>
-            <h3 style="margin-bottom:1.5rem; font-family:'Exo 2';">Přihlášení</h3>
-            <form onsubmit="event.preventDefault();" style="display:grid; gap:1rem;">
-                <div style="display:grid; gap:0.5rem;">
-                    <label style="font-size:0.85rem; font-weight:600;">E-mail</label>
-                    <input type="email" placeholder="you@example.com" style="padding:0.75rem; background:var(--bg); border:1px solid var(--border); color:var(--text);" required>
-                </div>
-                <div style="display:grid; gap:0.5rem;">
-                    <label style="font-size:0.85rem; font-weight:600;">Heslo</label>
-                    <input type="password" placeholder="••••••••" style="padding:0.75rem; background:var(--bg); border:1px solid var(--border); color:var(--text);" required>
-                </div>
-                <button class="btn btn--primary" type="submit" style="margin-top:0.5rem;">Přihlásit se</button>
+            <label for="modal-toggle" class="panel__close">×</label>
+            <h2>LOG IN</h2>
+            <form style="display:grid; gap:1.2rem;">
+                <input type="email" placeholder="E-mail" required style="padding:1rem;">
+                <input type="password" placeholder="Heslo" required style="padding:1rem;">
+                <button type="submit" class="btn btn--primary">Přihlásit se</button>
             </form>
         </div>
     </div>
 
+    <!-- Language Modal -->
     <div class="panel-overlay lang-overlay">
         <div class="panel">
-            <label class="panel__close" for="lang-toggle">&times;</label>
-            <h3 style="margin-bottom:1.5rem; font-family:'Exo 2';">Zvolit Jazyk</h3>
-            <div style="display:grid; gap:0.75rem;">
-                <button class="btn" style="background:var(--bg-alt); color:var(--text); text-align:left;">Čeština (CZ)</button>
-                <button class="btn" style="background:var(--bg); color:var(--text); text-align:left; opacity:0.7;">English (EN)</button>
-            </div>
+            <label for="lang-toggle" class="panel__close">×</label>
+            <h2>Jazyk</h2>
+            <button class="btn" style="width:100%; margin-bottom:0.5rem; text-align:left;">Čeština (CZ)</button>
+            <button class="btn" style="width:100%; text-align:left;">English (EN)</button>
         </div>
     </div>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 Stellar Dynamics. Všechna práva vyhrazena. | Merch</p>
-    </footer>
-
-    <script>
-        const track = document.getElementById('news-track');
-        const dots = document.querySelectorAll('#carousel-dots .dot');
-
-        track.addEventListener('scroll', () => {
-            const width = track.offsetWidth;
-            const activeIndex = Math.round(track.scrollLeft / width);
-            dots.forEach((dot, idx) => {
-                dot.classList.toggle('active', idx === activeIndex);
-            });
-        });
-
-        dots.forEach(dot => {
-            dot.addEventListener('click', function() {
-                const index = parseInt(this.getAttribute('data-index'));
-                track.scrollTo({
-                    left: track.offsetWidth * index,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>

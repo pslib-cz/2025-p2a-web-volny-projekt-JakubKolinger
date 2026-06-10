@@ -1,19 +1,78 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/main.css">
     <title>Contact</title>
 </head>
+
 <body>
+    <nav>
+        <a href="./index.html" class="logo">
+            <img class="logo_image" src="./assets/images/logo.svg" alt="logo">
+            <p class="logo_text">Stellar Dynamics</p>
+        </a>
+        <menu>
+            <li><a href="./index.html">Domů</a></li>
+            <li><a href="./produkty.html">Produkty</a></li>
+            <li><a href="./kontakty.html">Kontakty</a></li>
+        </menu>
+    </nav>
     <header>
+        <h2>Kontakty:</h2>
     </header>
 
     <main>
+        <div class="contacts">
+            <div class="support"></div>
+            <div class=""></div>
+        </div>
+        <form class="troubleshooting">
+
+            <div>
+                <label for="jmeno">Jméno:</label>
+                <input type="text" id="jmeno" name="jmeno">
+            </div>
+
+            <div>
+                <label for="duvod">Důvod:</label>
+                <select id="duvod" name="duvod">
+                    <option value="" disabled selected>Vyberte možnost...</option>
+                    <option value="technicky-problem">Technický problém</option>
+                    <option value="dotaz">Dotaz</option>
+                    <option value="reklamace">Reklamace</option>
+                    <option value="jine">Jiné</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="popis">Rozepsání k důvodu:</label>
+                <textarea id="popis" name="popis"></textarea>
+            </div>
+
+            <button type="reset">Odeslat</button>
+
+        </form>
+
     </main>
 
     <footer>
+        <div class="footer-up">
+            <a href="#">merch</a>
+        </div>
+
+        <div class="footer-down">
+            <p>Copyright © Stellar Dynamics </p>
+            <div class="social-sites">
+                <img src="./assets/images/instagram.svg" alt="instagram">
+                <img src="./assets/images/reddit.svg" alt="reddit">
+                <img src="./assets/images/facebook.svg" alt="facebook">
+                <img src="./assets/images/youtube.svg" alt="youtube">
+            </div>
+        </div>
     </footer>
 </body>
+
 </html>

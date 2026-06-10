@@ -1,0 +1,42 @@
+.steam-gallery-main {
+    position: relative;
+}
+
+.steam-main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.steam-main-image#img1 {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.steam-main-image:target {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+
+.steam-gallery-main:has(.steam-main-image:target) #img1:not(:target) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.steam-gallery-thumbnails {
+    display: flex;
+}
+
+.steam-thumb-link {
+    display: inline-block;
+}

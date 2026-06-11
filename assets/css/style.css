@@ -1,0 +1,84 @@
+header {
+    display: grid;
+    grid-template-areas:
+        "loga-top    loga-top"
+        "loga-left   about"
+        "about       loga-right"
+        "loga-bottom loga-bottom";
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 2rem 1.25rem;
+    gap: 1.5rem;
+}
+
+.about {
+    grid-area: about;
+}
+
+.about h2 {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-2xl);
+    color: var(--color-text);
+    margin: 0 0 0.5rem 0;
+}
+
+.about p {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.loga {
+    display: contents;
+}
+
+.loga a img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: contain;
+    filter: grayscale(1) opacity(0.6);
+    transition: filter 0.2s;
+}
+
+.loga a:hover img {
+    filter: grayscale(0) opacity(1);
+}
+
+.logo--blender  { grid-area: loga-top;    justify-self: center; }
+.logo--vscode   { grid-area: loga-left;   justify-self: center; }
+.logo--vulkan   { grid-area: loga-right;  justify-self: center; }
+.logo--unity    { grid-area: loga-bottom; justify-self: start;  padding-left: 20%; }
+.logo--godot    { grid-area: loga-bottom; justify-self: end;    padding-right: 20%; }
+
+@media (min-width: 768px) {
+    header {
+        grid-template-areas:
+            "about      loga-top"
+            "about      loga-right"
+            "about      loga-bottom";
+        grid-template-columns: 1fr 1fr;
+        padding: 3rem 2rem;
+    }
+
+    .about h2 {
+        font-size: var(--text-4xl);
+    }
+
+    .about p {
+        font-size: var(--text-lg);
+    }
+
+    .loga a img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .logo--blender  { justify-self: end; }
+    .logo--vscode   { grid-area: loga-top;    justify-self: start; }
+    .logo--vulkan   { justify-self: start; }
+    .logo--unity    { grid-area: loga-bottom; justify-self: start; padding-left: 0; }
+    .logo--godot    { grid-area: loga-bottom; justify-self: end;   padding-right: 0; }
+}

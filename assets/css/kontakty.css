@@ -1,0 +1,121 @@
+header {
+    text-align: center;
+    padding: 2rem 1.25rem 0 1.25rem;
+}
+
+header h2 {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+    color: var(--color-text);
+    margin: 0;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.support h3,
+.work h3 {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-xl);
+    color: var(--color-text);
+    margin: 0 0 0.5rem 0;
+}
+
+.support p,
+.work p {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    margin: 0.25rem 0;
+}
+
+main > h2 {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+    color: var(--color-text);
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+}
+
+.troubleshooting {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.troubleshooting div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.troubleshooting label {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+}
+
+.troubleshooting input,
+.troubleshooting select,
+.troubleshooting textarea {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    background-color: var(--color-subtle-detail);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.troubleshooting textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.troubleshooting input:focus,
+.troubleshooting select:focus,
+.troubleshooting textarea:focus {
+    outline: 2px solid var(--color-primary-accent);
+}
+
+.troubleshooting button {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-base);
+    color: var(--color-background);
+    background-color: var(--color-primary-accent);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.2s;
+}
+
+.troubleshooting button:hover {
+    background-color: var(--color-secondary-accent);
+}
+
+@media (min-width: 768px) {
+    .contacts {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+}

@@ -6,6 +6,11 @@
     min-height: 500px;
 }
 
+.news a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
 .header--home .loga {
     position: relative;
     width: clamp(320px, 85vw, 420px);

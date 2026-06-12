@@ -47,6 +47,10 @@
 
     }
 
+    main {
+        flex: 1;
+    }
+
 
 
     body {
@@ -55,6 +59,9 @@
         font-weight: var(--weight-regular);
         color: var(--color-text);
         background-color: var(--color-background);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     h1,

@@ -1,0 +1,90 @@
+.header--novinka {
+    text-align: center;
+    padding: 2rem 1.25rem 0 1.25rem;
+}
+
+.header--novinka h2 {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+    color: var(--color-text);
+    margin: 0;
+}
+
+.main--novinka {
+    padding: 2rem 1.25rem;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.novinka {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.novinka__image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.novinka__text p {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    margin: 0 0 1rem 0;
+    line-height: 1.7;
+}
+
+.novinka__text a {
+    color: var(--color-primary-accent);
+    text-decoration: underline;
+}
+
+.novinka__text a:hover {
+    color: var(--color-secondary-accent);
+}
+
+@media (min-width: 768px) {
+    .main--novinka {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .novinka {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .novinka__image {
+        width: 45%;
+        height: 400px;
+        flex-shrink: 0;
+    }
+
+    .novinka__text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+
+    .header--novinka h2 {
+        display: none;
+    }
+
+    .novinka__text::before {
+        content: attr(data-title);
+        font-family: var(--font-display);
+        font-weight: var(--weight-bold);
+        font-size: var(--text-2xl);
+        color: var(--color-text);
+        margin-bottom: 1rem;
+        display: block;
+        text-transform: uppercase;
+    }
+}

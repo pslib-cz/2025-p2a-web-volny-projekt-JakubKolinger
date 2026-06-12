@@ -69,3 +69,39 @@ if (btnFilter && filterSort) {
 if (btnSort && filterSort) {
     btnSort.addEventListener('click', () => filterSort.classList.toggle('is-open'));
 }
+
+const thumbs = document.querySelectorAll('.steam-gallery__thumb');
+const mainImg = document.querySelector('.steam-gallery__active');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+const galleryMain = document.querySelector('.steam-gallery__main');
+
+if (thumbs.length && mainImg) {
+    thumbs.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            mainImg.src = thumb.src;
+            mainImg.alt = thumb.alt;
+            thumbs.forEach(t => t.classList.remove('is-active'));
+            thumb.classList.add('is-active');
+        });
+    });
+}
+
+if (galleryMain && lightbox) {
+    galleryMain.addEventListener('click', () => {
+        lightboxImg.src = mainImg.src;
+        lightboxImg.alt = mainImg.alt;
+        lightbox.classList.add('is-open');
+    });
+
+    lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('is-open');
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('is-open');
+        }
+    });
+}

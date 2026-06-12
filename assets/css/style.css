@@ -1,84 +1,287 @@
-header {
-    display: grid;
-    grid-template-areas:
-        "loga-top    loga-top"
-        "loga-left   about"
-        "about       loga-right"
-        "loga-bottom loga-bottom";
-    grid-template-columns: 1fr 1fr;
+.header--home {
+    display: flex;
+    justify-content: center;
     align-items: center;
     padding: 2rem 1.25rem;
-    gap: 1.5rem;
+    min-height: 500px;
 }
 
-.about {
-    grid-area: about;
+.header--home .loga {
+    position: relative;
+    width: clamp(320px, 85vw, 420px);
+    height: clamp(320px, 85vw, 420px);
+    display: grid;
+    place-items: center;
+    overflow: visible;
 }
 
-.about h2 {
+.header--home .about {
+    grid-area: 1 / 1;
+    text-align: center;
+    padding: 22%;
+    box-sizing: border-box;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.header--home .about h2 {
     font-family: var(--font-display);
     font-weight: var(--weight-bold);
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     color: var(--color-text);
     margin: 0 0 0.5rem 0;
 }
 
-.about p {
+.header--home .about p {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.header--home .loga a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: clamp(2.5rem, 8vw, 4rem);
+    height: clamp(2.5rem, 8vw, 4rem);
+}
+
+.header--home .loga a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(1) opacity(0.6);
+    transition: filter 0.2s ease;
+}
+
+.header--home .loga a:hover img {
+    filter: grayscale(0) opacity(1);
+}
+
+.logo--blender {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(clamp(120px, 38vw, 160px)) rotate(0deg);
+}
+
+.logo--vscode {
+    transform: translate(-50%, -50%) rotate(72deg) translateX(clamp(120px, 38vw, 160px)) rotate(-72deg);
+}
+
+.logo--unity {
+    transform: translate(-50%, -50%) rotate(144deg) translateX(clamp(120px, 38vw, 160px)) rotate(-144deg);
+}
+
+.logo--godot {
+    transform: translate(-50%, -50%) rotate(216deg) translateX(clamp(120px, 38vw, 160px)) rotate(-216deg);
+}
+
+.logo--vulkan {
+    transform: translate(-50%, -50%) rotate(288deg) translateX(clamp(120px, 38vw, 160px)) rotate(-288deg);
+}
+
+.news__title {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+    color: var(--color-text);
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+}
+
+.news {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 1rem calc(50% - 150px);
+    cursor: grab;
+}
+
+.news:active {
+    cursor: grabbing;
+}
+
+.news::-webkit-scrollbar {
+    display: none;
+}
+
+.news__new {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    width: 300px;
+    background-color: var(--color-subtle-detail);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    scroll-snap-align: center;
+}
+
+.news__image {
+    width: 130px;
+    min-height: 140px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.news__text {
+    padding: 0.75rem;
+}
+
+.news__text h3 {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-base);
+    color: var(--color-text);
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.news__text p {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0 1.5rem 0;
+}
+
+.news__dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--color-primary-accent);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 0;
+}
+
+.news__dot.is-active {
+    background-color: var(--color-secondary-accent);
+    border-color: var(--color-secondary-accent);
+}
+
+.image-right,
+.image-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1.25rem;
+}
+
+.section__image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.text-left h2 {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-2xl);
+    color: var(--color-text);
+    margin: 0 0 0.75rem 0;
+}
+
+.text-left p {
     font-family: var(--font-body);
     font-size: var(--text-base);
     color: var(--color-text);
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-.loga {
-    display: contents;
-}
-
-.loga a img {
-    width: 3.5rem;
-    height: 3.5rem;
-    object-fit: contain;
-    filter: grayscale(1) opacity(0.6);
-    transition: filter 0.2s;
-}
-
-.loga a:hover img {
-    filter: grayscale(0) opacity(1);
-}
-
-.logo--blender  { grid-area: loga-top;    justify-self: center; }
-.logo--vscode   { grid-area: loga-left;   justify-self: center; }
-.logo--vulkan   { grid-area: loga-right;  justify-self: center; }
-.logo--unity    { grid-area: loga-bottom; justify-self: start;  padding-left: 20%; }
-.logo--godot    { grid-area: loga-bottom; justify-self: end;    padding-right: 20%; }
 
 @media (min-width: 768px) {
-    header {
-        grid-template-areas:
-            "about      loga-top"
-            "about      loga-right"
-            "about      loga-bottom";
-        grid-template-columns: 1fr 1fr;
+    .header--home .loga {
+        width: clamp(380px, 45vw, 500px);
+        height: clamp(380px, 45vw, 500px);
+    }
+
+    .header--home .about {
+        padding: 18%;
+    }
+
+    .header--home .about h2 {
+        font-size: var(--text-2xl);
+    }
+
+    .header--home .about p {
+        font-size: var(--text-sm);
+    }
+
+    .logo--blender {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(clamp(140px, 18vw, 200px)) rotate(0deg);
+    }
+
+    .logo--vscode {
+        transform: translate(-50%, -50%) rotate(72deg) translateX(clamp(140px, 18vw, 200px)) rotate(-72deg);
+    }
+
+    .logo--unity {
+        transform: translate(-50%, -50%) rotate(144deg) translateX(clamp(140px, 18vw, 200px)) rotate(-144deg);
+    }
+
+    .logo--godot {
+        transform: translate(-50%, -50%) rotate(216deg) translateX(clamp(140px, 18vw, 200px)) rotate(-216deg);
+    }
+
+    .logo--vulkan {
+        transform: translate(-50%, -50%) rotate(288deg) translateX(clamp(140px, 18vw, 200px)) rotate(-288deg);
+    }
+
+    .news {
+        padding: 1.5rem calc(50% - 240px);
+    }
+
+    .news__title {
+        font-size: var(--text-4xl);
+        margin: 3rem 0 1.5rem 0;
+    }
+
+    .news__new {
+        width: 480px;
+    }
+
+    .news__image {
+        width: 200px;
+        min-height: 160px;
+    }
+
+    .image-right,
+    .image-left {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
         padding: 3rem 2rem;
     }
 
-    .about h2 {
-        font-size: var(--text-4xl);
+    .image-left {
+        flex-direction: row-reverse;
     }
 
-    .about p {
-        font-size: var(--text-lg);
+    .section__image {
+        width: 45%;
+        height: 300px;
+        flex-shrink: 0;
     }
 
-    .loga a img {
-        width: 5rem;
-        height: 5rem;
+    .text-left h2 {
+        font-size: var(--text-3xl);
     }
-
-    .logo--blender  { justify-self: end; }
-    .logo--vscode   { grid-area: loga-top;    justify-self: start; }
-    .logo--vulkan   { justify-self: start; }
-    .logo--unity    { grid-area: loga-bottom; justify-self: start; padding-left: 0; }
-    .logo--godot    { grid-area: loga-bottom; justify-self: end;   padding-right: 0; }
 }

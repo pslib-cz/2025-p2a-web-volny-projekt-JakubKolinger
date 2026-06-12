@@ -1,17 +1,16 @@
 const toggle = document.querySelector('.nav__toggle');
 const menu = document.querySelector('nav menu');
+
+if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen);
+    });
+}
+
 const newsTrack = document.querySelector('.news');
 const dotsContainer = document.querySelector('.news__dots');
 const newsItems = document.querySelectorAll('.news__new');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-toggle.addEventListener('click', () => {
-  const isOpen = menu.classList.toggle('is-open');
-  toggle.setAttribute('aria-expanded', isOpen);
-});
-
 
 if (newsTrack && dotsContainer && newsItems.length) {
     newsItems.forEach((_, i) => {
@@ -39,19 +38,34 @@ if (newsTrack && dotsContainer && newsItems.length) {
         dots.forEach(d => d.classList.remove('is-active'));
         dots[closest].classList.add('is-active');
     });
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    newsTrack.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - newsTrack.offsetLeft;
+        scrollLeft = newsTrack.scrollLeft;
+    });
+    newsTrack.addEventListener('mouseleave', () => isDown = false);
+    newsTrack.addEventListener('mouseup', () => isDown = false);
+    newsTrack.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - newsTrack.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        newsTrack.scrollLeft = scrollLeft - walk;
+    });
 }
 
-newsTrack.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - newsTrack.offsetLeft;
-    scrollLeft = newsTrack.scrollLeft;
-});
-newsTrack.addEventListener('mouseleave', () => isDown = false);
-newsTrack.addEventListener('mouseup', () => isDown = false);
-newsTrack.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - newsTrack.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    newsTrack.scrollLeft = scrollLeft - walk;
-});
+const btnFilter = document.querySelector('#btn-filter');
+const btnSort = document.querySelector('#btn-sort');
+const filterSort = document.querySelector('.filter-sort');
+
+if (btnFilter && filterSort) {
+    btnFilter.addEventListener('click', () => filterSort.classList.toggle('is-open'));
+}
+if (btnSort && filterSort) {
+    btnSort.addEventListener('click', () => filterSort.classList.toggle('is-open'));
+}
